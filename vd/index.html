@@ -1,0 +1,204 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" type="text/css" href="./popup.css">
+    <script src="./popup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5919850764317455"
+     crossorigin="anonymous"></script>
+    
+    <title>Spin Wheel</title>
+  </head>
+  <body>
+    <!-- <button id="spin">Spin</button>
+    <span class="arrow"></span>
+    <div class="container">
+      <div class="one">Verdade</div>
+      <div class="two">Desafio</div>
+      <div class="three">Verdade</div>
+      <div class="four">Desafio</div>
+      <div class="five">Verdade</div>
+      <div class="six">Desafio</div>
+      <div class="seven">Verdade</div>
+      <div class="eight">Desafio</div>
+    </div> -->
+    <button id="spin">Spin</button>
+<span class="arrow"></span>
+<div class="container">
+  <div class="one" data-value="verdade">Verdade</div>
+  <div class="two" data-value="desafio">Desafio</div>
+  <div class="three" data-value="verdade">Verdade</div>
+  <div class="four" data-value="desafio">Desafio</div>
+  <div class="five" data-value="verdade">Verdade</div>
+  <div class="six" data-value="desafio">Desafio</div>
+  <div class="seven" data-value="verdade">Verdade</div>
+  <div class="eight" data-value="desafio">Desafio</div>
+</div>
+
+         <!-- Conteúdo do pop-up -->
+    <div id="myModal" class="modal">
+
+     
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <label id="insira-os-nomes" for="nome">Insira o nome dos participantes</label>
+        <input type="text" id="nome" name="nome">
+        <button id="add-participant">Adicionar participante</button>
+        <button onclick="canContinue()" id="pronto">Pronto</button>
+
+        <ul id="participants-list"></ul>
+        
+      </div>
+  
+    </div>
+    
+   
+
+    <div id="participants-box">
+    
+        <div class="wrapper">
+          <div class="line line1">
+            <span class="circle circle-top"></span>
+            <div class="dotted">
+              <span class="dot dot-top"></span>
+              <span class="dot dot-middle-top"></span>
+              <span class="dot dot-middle-bottom"></span>
+              <span class="dot dot-bottom"></span>
+            </div>
+            <span class="circle circle-bottom"></span>
+          </div>
+          <div class="line line2">
+            <span class="circle circle-top"></span>
+            <div class="dotted">
+              <span class="dot dot-top"></span>
+              <span class="dot dot-middle-top"></span>
+              <span class="dot dot-middle-bottom"></span>
+              <span class="dot dot-bottom"></span>
+            </div>
+            <span class="circle circle-bottom"></span>
+          </div>
+          <div class="line line3">
+            <span class="circle circle-top"></span>
+            <div class="dotted">
+              <span class="dot dot-top"></span>
+              <span class="dot dot-middle-top"></span>
+              <span class="dot dot-middle-bottom"></span>
+              <span class="dot dot-bottom"></span>
+            </div>
+            <span class="circle circle-bottom"></span>
+          </div>
+          <div class="line line4">
+            <span class="circle circle-top"></span>
+            <div class="dotted">
+              <span class="dot dot-top"></span>
+              <span class="dot dot-middle-top"></span>
+              <span class="dot dot-middle-bottom"></span>
+              <span class="dot dot-bottom"></span>
+            </div>
+            <span class="circle circle-bottom"></span>
+          </div>
+          <div class="line line5">
+            <span class="circle circle-top"></span>
+            <div class="dotted">
+              <span class="dot dot-top"></span>
+              <span class="dot dot-middle-top"></span>
+              <span class="dot dot-middle-bottom"></span>
+              <span class="dot dot-bottom"></span>
+            </div>
+            <span class="circle circle-bottom"></span>
+          </div>
+          <div class="line line6">
+            <span class="circle circle-top"></span>
+            <div class="dotted">
+              <span class="dot dot-top"></span>
+              <span class="dot dot-middle-top"></span>
+              <span class="dot dot-middle-bottom"></span>
+              <span class="dot dot-bottom"></span>
+            </div>
+            <span class="circle circle-bottom"></span>
+          </div>
+          <div class="line line7">
+            <span class="circle circle-top"></span>
+            <div class="dotted">
+              <span class="dot dot-top"></span>
+              <span class="dot dot-middle-top"></span>
+              <span class="dot dot-middle-bottom"></span>
+              <span class="dot dot-bottom"></span>
+            </div>
+            <span class="circle circle-bottom"></span>
+          </div>
+          <div class="line line8">
+            <span class="circle circle-top"></span>
+            <div class="dotted">
+              <span class="dot dot-top"></span>
+              <span class="dot dot-middle-top"></span>
+              <span class="dot dot-middle-bottom"></span>
+              <span class="dot dot-bottom"></span>
+            </div>
+            <span class="circle circle-bottom"></span>
+          </div>
+          <div class="line line9">
+            <span class="circle circle-top"></span>
+            <div class="dotted">
+              <span class="dot dot-top"></span>
+              <span class="dot dot-middle-top"></span>
+              <span class="dot dot-middle-bottom"></span>
+              <span class="dot dot-bottom"></span>
+            </div>
+            <span class="circle circle-bottom"></span>
+          </div>
+          <div class="line line10">
+            <span class="circle circle-top"></span>
+            <div class="dotted">
+              <span class="dot dot-top"></span>
+              <span class="dot dot-middle-top"></span>
+              <span class="dot dot-middle-bottom"></span>
+              <span class="dot dot-bottom"></span>
+            </div>
+            <span class="circle circle-bottom"></span>
+          </div>
+          <div class="line line11">
+            <span class="circle circle-top"></span>
+            <div class="dotted">
+              <span class="dot dot-top"></span>
+              <span class="dot dot-middle-top"></span>
+              <span class="dot dot-middle-bottom"></span>
+              <span class="dot dot-bottom"></span>
+            </div>
+            <span class="circle circle-bottom"></span>
+          </div>
+        </div>
+     
+      <!-- <h1 id="demo-rainbow">Participantes</h1> -->
+      <div class='demo rainbow'>Participantes</div>
+     
+    </div>
+
+
+
+     <div id="challenge-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-popup" class="close">&times;</span>
+        <h2 id="verdade-desafio"></h2>
+        <h2 id="desafiado"></h2>
+        <p id="challenge-text"></p>
+        <button onclick="closePop()" id="new-challenge">Continuar</button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    
+  
+    <script src="./index.js"></script>
+    <script src="./popup.js"></script>
+  </body>
+</html>
+
